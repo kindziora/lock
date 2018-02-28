@@ -1,5 +1,5 @@
 {
-    "name": "malkusch/lock",
+    "name": "kindziora/lock",
     "type": "library",
     "description": "Mutex library for exclusive code execution.",
     "keywords": ["mutex", "lock", "flock", "semaphore", "redlock", "memcache", "redis", "cas"],
