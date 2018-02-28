@@ -32,13 +32,14 @@ abstract class LockMutex extends Mutex
      */
     abstract protected function unlock();
     
-    public function synchronized(callable $code)
+    public function synchronized($code)
     {
         $this->lock();
-        try {
+        try{
             return call_user_func($code);
-        } finally {
+        }catch(\Exception $e){
             $this->unlock();
         }
+
     }
 }
