@@ -47,7 +47,7 @@ class PHPRedisMutex extends RedisMutex
     protected function add($redis, $key, $value, $expire)
     {
         try {
-            return $redis->set($key, $value, ["nx", "ex" => $expire]);
+            return $redis->set($key, $value, array("nx", "ex" => $expire));
         } catch (RedisException $e) {
             $message = sprintf(
                 "Failed to acquire lock for key '%s' at %s",
